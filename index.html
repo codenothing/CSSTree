@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>CSSTree by codenothing</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">CSSTree</h1>
+        <p class="header">CSS to javascript object parser</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/codenothing/CSSTree/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/codenothing/CSSTree/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/codenothing/CSSTree">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/codenothing">codenothing</a></p>
+
+
+      </header>
+      <section>
+        <h1>CSSTree</h1>
+
+<p>CSS parsing into javascript object.</p>
+
+<h3>Installation</h3>
+
+<div class="highlight"><pre><span class="nv">$ </span>npm install csstree
+</pre></div>
+
+<p>CSSTree may also be run in a browser enviornment.</p>
+
+<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">'text/javascript'</span> <span class="na">src=</span><span class="s">'CSSTree.js'</span><span class="nt">&gt;&lt;/script&gt;</span>
+</pre></div>
+
+<h3>Usage</h3>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">instance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CSSTree</span><span class="p">(</span> <span class="nx">css</span> <span class="p">);</span>
+
+<span class="c1">// CSS Tree</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">branches</span> <span class="p">);</span>
+</pre></div>
+
+<h3>Example</h3>
+
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">instance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CSSTree</span><span class="p">(</span> <span class="s2">"html body { background: red; margin: 10px 5px; }"</span> <span class="p">);</span>
+
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">branches</span> <span class="p">);</span>
+</pre></div>
+
+<p>Will give an object format of the following:</p>
+
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="nx">selector</span><span class="o">:</span> <span class="s1">'html body'</span><span class="p">,</span>
+    <span class="nx">parts</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s1">'html'</span><span class="p">,</span>
+        <span class="s1">'body'</span>
+    <span class="p">],</span>
+    <span class="nx">rules</span><span class="o">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nx">property</span><span class="o">:</span> <span class="s1">'background'</span><span class="p">,</span>
+            <span class="nx">value</span><span class="o">:</span> <span class="s1">'red'</span><span class="p">,</span>
+            <span class="nx">parts</span><span class="o">:</span> <span class="p">[</span>
+                <span class="s1">'red'</span>
+            <span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nx">property</span><span class="o">:</span> <span class="s1">'margin'</span><span class="p">,</span>
+            <span class="nx">value</span><span class="o">:</span> <span class="s1">'10px 5px'</span><span class="p">,</span>
+            <span class="nx">parts</span><span class="o">:</span> <span class="p">[</span>
+                <span class="s1">'10px'</span><span class="p">,</span>
+                <span class="s1">'5px'</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
+<h3>Position Objects</h3>
+
+<p>Every selector, rule, atrule and comment includes a 'Position' object which contains useful
+information about that fragments section of the stylesheet. Comes in the following form:</p>
+
+<div class="highlight"><pre><span class="p">{</span>
+    <span class="nx">property</span><span class="o">:</span> <span class="s1">'background'</span><span class="p">,</span>
+    <span class="nx">value</span><span class="o">:</span> <span class="s1">'red'</span><span class="p">,</span>
+    <span class="nx">parts</span><span class="o">:</span> <span class="p">[</span>
+        <span class="s1">'red'</span>
+    <span class="p">],</span>
+    <span class="nx">position</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">range</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">start</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+            <span class="nx">end</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
+            <span class="nx">length</span><span class="o">:</span> <span class="mi">20</span>
+        <span class="p">},</span>
+        <span class="nx">start</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">line</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="nx">character</span><span class="o">:</span> <span class="mi">2</span>
+        <span class="p">},</span>
+        <span class="nx">end</span><span class="o">:</span> <span class="p">{</span>
+            <span class="nx">line</span><span class="o">:</span> <span class="mi">2</span><span class="p">,</span>
+            <span class="nx">character</span><span class="o">:</span> <span class="mi">22</span>
+        <span class="p">},</span>
+        <span class="nx">chunks</span><span class="o">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nx">start</span><span class="o">:</span> <span class="mi">40</span><span class="p">,</span>
+                <span class="nx">end</span><span class="o">:</span> <span class="mi">60</span><span class="p">,</span>
+                <span class="nx">length</span><span class="o">:</span> <span class="mi">20</span>
+            <span class="p">}</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
+<ul>
+<li>
+<strong>range</strong>: Contains the start and end positions of the fragment within the stylesheet</li>
+<li>
+<strong>start</strong>: Contains the starting line/character info of the fragment based on line breaks (\r\n|\r|\n)</li>
+<li>
+<strong>end</strong>: Contains the ending line/character info of the fragment based on line breaks (\r\n|\r|\n)</li>
+<li>
+<strong>chunks</strong>: When a comment exists between the start &amp; end positions, chunks represents only the sections that belong to this position.</li>
+</ul><h3>License</h3>
+
+<pre><code>The MIT License
+
+Copyright (c) 2013 Corey Hart
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+</code></pre>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
