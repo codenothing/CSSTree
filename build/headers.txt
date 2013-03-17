@@ -1,0 +1,5 @@
+/*
+ * CSSTree 0.0.1
+ * Corey Hart @ http://www.codenothing.com
+ * MIT License http://www.codenothing.com/license
+ */

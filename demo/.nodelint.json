@@ -1,0 +1,8 @@
+{
+	"ignore": [
+		"jquery.js",
+		"textarea.js",
+		"counter/jquery.js",
+		"counter/textarea.js"
+	]
+}

@@ -1,0 +1,17 @@
+#test span.hello,
+#test2 span.hello[id='yes'] ~ div
+{
+	color: black;
+}
+
+span.a.b.c.d {
+	color: black;
+}
+
+body > div[title='spacing test\'s'] + a[href$='nospace'] :first-child {
+	color: black;
+}
+
+body > div.a.b[title='spacing test\'s'].c.d + a.a.b[href$="space ]"].c.d :first-child {
+	color: black;
+}

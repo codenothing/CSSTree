@@ -1,0 +1,20 @@
+{
+	"name": "csstree",
+	"description": "CSS to javascript object parser",
+	"repository": "https://github.com/codenothing/CSSTree/",
+	"keywords": [ "css", "parser", "tool" ],
+	"author": "Corey Hart <corey@codenothing.com> (http://www.codenothing.com)",
+	"homepage": "http://codenothing.github.com/CSSTree/",
+	"version": "0.0.1",
+	"main": "./index.js",
+	"engines": {
+		"node": ">=0.8"
+	},
+	"dependencies": {
+	},
+	"devDependencies": {
+		"nlint": "0.0.3",
+		"munit": "0.0.2",
+		"async": "0.2.6"
+	}
+}
