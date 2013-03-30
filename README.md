@@ -2,6 +2,7 @@
 
 CSS parsing into javascript object.
 
+[![Build Status](https://travis-ci.org/codenothing/CSSTree.png?branch=master)](https://travis-ci.org/codenothing/CSSTree)  
 
 ### Installation
 
