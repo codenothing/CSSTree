@@ -1,8 +1,8 @@
 global.CSSTree = require( '../' );
-global.MUnit = require( 'munit' );
+global.munit = require( 'munit' );
 
 // Defaults
-MUnit.Defaults.Settings.stopOnFail = true;
+munit.defaults.settings.stopOnFail = true;
 
 // Run tests
-MUnit.render( __dirname + '/../test/' );
+munit.render( __dirname + '/../test/', { junit: __dirname + '/results/' } );

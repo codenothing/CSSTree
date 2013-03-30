@@ -10,11 +10,14 @@
 	"engines": {
 		"node": ">=0.8"
 	},
+	"scripts": {
+		"test": "make test"
+	},
 	"dependencies": {
 	},
 	"devDependencies": {
-		"nlint": "0.0.3",
-		"munit": "0.0.2",
+		"nlint": "0.0.4",
+		"munit": "0.0.3",
 		"async": "0.2.6"
 	}
 }

@@ -1,4 +1,4 @@
-MUnit( 'Position.init', function( assert ) {
+munit( 'Position.init', function( assert ) {
 	var position = new CSSTree.Position( 25 );
 
 	assert.deepEqual( 'range', position.range, { start: 25, end: 25, length: 0 } );

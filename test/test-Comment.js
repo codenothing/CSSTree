@@ -1,4 +1,4 @@
-MUnit( 'Comment.init', function( assert ) {
+munit( 'Comment.init', function( assert ) {
 	var position = new CSSTree.Position( 25 ),
 		comment = new CSSTree.Comment( " /* Test Comment */ ", null, position );
 	

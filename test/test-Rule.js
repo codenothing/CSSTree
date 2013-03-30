@@ -1,4 +1,4 @@
-MUnit( 'Rule.init', function( assert ) {
+munit( 'Rule.init', function( assert ) {
 	var position = new CSSTree.Position( 25 ),
 		rule = new CSSTree.Rule( " color ", " red !important ", position );
 
@@ -8,7 +8,7 @@ MUnit( 'Rule.init', function( assert ) {
 	assert.deepEqual( 'parts', rule.parts, [ "red", "!important" ] );
 });
 
-MUnit( 'Rule.parts', function( assert ) {
+munit( 'Rule.parts', function( assert ) {
 	var rule = new CSSTree.Rule();
 
 	[

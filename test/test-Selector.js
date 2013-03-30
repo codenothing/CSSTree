@@ -1,4 +1,4 @@
-MUnit( 'Selector.init', function( assert ) {
+munit( 'Selector.init', function( assert ) {
 	var position = new CSSTree.Position( 25 ),
 		rules = [ 1, 2, 3 ],
 		selector = new CSSTree.Selector( " html body ", rules, position );
@@ -10,7 +10,7 @@ MUnit( 'Selector.init', function( assert ) {
 	assert.deepEqual( 'parts', selector.parts, [ "html", "body" ] );
 });
 
-MUnit( 'Selector.parts', function( assert ) {
+munit( 'Selector.parts', function( assert ) {
 	var selector = new CSSTree.Selector();
 
 	[

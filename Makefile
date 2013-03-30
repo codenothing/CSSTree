@@ -1,8 +1,13 @@
+.PHONY: all test
+
 all: lint
 	@node build/build.js
+
+clean:
+	@rm -rf build/results/
 
 lint:
 	@node build/lint.js
 
-test: lint
+test: clean lint
 	@node build/test.js

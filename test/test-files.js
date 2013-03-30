@@ -22,11 +22,11 @@ function RemovePositions( array ) {
 }
 
 // Lower sheet rendering priority to allow focused tests to run first
-MUnit( 'Files', { priority: MUnit.PRIORITY_LOW } );
+munit( 'Files', { priority: munit.PRIORITY_LOW } );
 
 
 // Sheet testing
-MUnit( 'Files.Sheets', function( assert ) {
+munit( 'Files.Sheets', function( assert ) {
 	fs.readdirSync( SHEETS ).forEach(function( dir ) {
 		if ( ! fs.statSync( SHEETS + dir ).isDirectory() ) {
 			return;
@@ -41,7 +41,7 @@ MUnit( 'Files.Sheets', function( assert ) {
 
 
 // Position Testing
-MUnit( 'Files.Positions', function( assert ) {
+munit( 'Files.Positions', function( assert ) {
 	fs.readdirSync( POSITIONS ).forEach(function( dir ) {
 		if ( ! fs.statSync( POSITIONS + dir ).isDirectory() ) {
 			return;

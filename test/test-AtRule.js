@@ -1,4 +1,4 @@
-MUnit( 'AtRule.init', function( assert ) {
+munit( 'AtRule.init', function( assert ) {
 	var position = new CSSTree.Position( 25 ),
 		atrule = new CSSTree.AtRule( " @import 'test.css' ", position );
 	
@@ -9,7 +9,7 @@ MUnit( 'AtRule.init', function( assert ) {
 	assert.deepEqual( 'parts', atrule.parts, [ "@import", "'test.css'" ] );
 });
 
-MUnit( 'AtRule.parts', function( assert ) {
+munit( 'AtRule.parts', function( assert ) {
 	var atrule = new CSSTree.AtRule();
 
 	[
