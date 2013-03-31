@@ -5,4 +5,7 @@ global.munit = require( 'munit' );
 munit.defaults.settings.stopOnFail = true;
 
 // Run tests
-munit.render( __dirname + '/../test/', { junit: __dirname + '/results/' } );
+munit.render( __dirname + '/../test/', {
+	junit: __dirname + '/results/',
+	junitPrefix: process.version.replace( /\./g, '_' )
+});

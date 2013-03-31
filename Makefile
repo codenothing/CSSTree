@@ -11,3 +11,6 @@ lint:
 
 test: clean lint
 	@node build/test.js
+
+test-full:
+	@./build/full.sh
