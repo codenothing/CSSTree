@@ -26,7 +26,20 @@ async.map( libs,
 
 		async.map( [ DIST_DIR, DEMO_DIR ],
 			function( dir, callback ) {
-				fs.writeFile( dir + 'CSSTree.js', contents, 'utf8', callback );
+				fs.exists( dir, function( exists ) {
+					if ( exists ) {
+						fs.writeFile( dir + 'CSSTree.js', contents, 'utf8', callback );
+					}
+					else {
+						fs.mkdir( dir, function( e ) {
+							if ( e ) {
+								throw e;
+							}
+
+							fs.writeFile( dir + 'CSSTree.js', contents, 'utf8', callback );
+						});
+					}
+				});
 			},
 			function( e ) {
 				if ( e ) {

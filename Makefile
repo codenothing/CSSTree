@@ -1,15 +1,17 @@
 .PHONY: all test
 
-all: lint
-	@node build/build.js
+all: build
 
 clean:
-	@rm -rf build/results/
+	@./build/clean.sh
 
 lint:
 	@node build/lint.js
 
-test: clean lint
+build: clean lint
+	@node build/build.js
+
+test: build
 	@node build/test.js
 
 test-full:

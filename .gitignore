@@ -1,2 +1,4 @@
 node_modules/
 build/results
+dist/
+demo/CSSTree.js
