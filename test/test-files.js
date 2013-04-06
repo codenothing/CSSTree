@@ -32,10 +32,19 @@ munit( 'Files.Sheets', function( assert ) {
 			return;
 		}
 
-		var sheet = fs.readFileSync( SHEETS + dir + '/sheet.css', 'utf8' ),
+		var name = 'sheet-' + dir,
+			branch = name + '-branch-',
+			sheet = fs.readFileSync( SHEETS + dir + '/sheet.css', 'utf8' ),
+			branches = RemovePositions( CSSTree( sheet ).branches ),
 			match = require( SHEETS + dir + '/tree.js' );
 
-		assert.deepEqual( 'sheet-' + dir, RemovePositions( CSSTree( sheet ).branches ), match );
+		// Make sure both sheets contain the same # of branches
+		assert.equal( name, branches.length, match.length );
+
+		// Test each branch individually to help in testing
+		branches.forEach(function( object, index ) {
+			assert.deepEqual( branch + index, object, match[ index ] );
+		});
 	});
 });
 
@@ -47,9 +56,18 @@ munit( 'Files.Positions', function( assert ) {
 			return;
 		}
 
-		var sheet = fs.readFileSync( POSITIONS + dir + '/sheet.css', 'utf8' ),
+		var name = 'positions-' + dir,
+			branch = name + '-branch-',
+			sheet = fs.readFileSync( POSITIONS + dir + '/sheet.css', 'utf8' ),
+			branches = CSSTree( sheet ).branches,
 			match = require( POSITIONS + dir + '/tree.js' );
 
-		assert.deepEqual( 'positions-' + dir, CSSTree( sheet ).branches, match );
+		// Make sure both sheets contain the same # of branches
+		assert.equal( name, branches.length, match.length );
+
+		// Test each branch individually to help in testing
+		branches.forEach(function( object, index ) {
+			assert.deepEqual( branch + index, object, match[ index ] );
+		});
 	});
 });
