@@ -1,8 +1,10 @@
 global.CSSTree = require( '../' );
 global.munit = require( 'munit' );
 
-// Defaults
-munit.defaults.settings.stopOnFail = true;
+// Only stop test suite when running make test
+if ( ! process.env.NODE_TEST_NO_SKIP ) {
+	munit.defaults.settings.stopOnFail = true;
+}
 
 // Run tests
 munit.render( __dirname + '/../test/', {

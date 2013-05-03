@@ -17,7 +17,7 @@
 	},
 	"devDependencies": {
 		"nlint": "0.0.4",
-		"munit": "0.0.4",
-		"async": "0.2.6"
+		"munit": "0.0.5",
+		"async": "0.2.7"
 	}
 }
