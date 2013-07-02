@@ -1,3 +1,6 @@
+var munit = global.munit,
+	CSSTree = global.CSSTree;
+
 munit( 'Rule.init', function( assert ) {
 	var position = new CSSTree.Position( 25 ),
 		rule = new CSSTree.Rule( " color ", " red !important ", position );

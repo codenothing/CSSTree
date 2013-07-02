@@ -1,3 +1,6 @@
+var munit = global.munit,
+	CSSTree = global.CSSTree;
+
 munit( 'AtRule.init', function( assert ) {
 	var position = new CSSTree.Position( 25 ),
 		atrule = new CSSTree.AtRule( " @import 'test.css' ", position );

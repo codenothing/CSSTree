@@ -1,26 +1,9 @@
-jQuery(function( jQuery ) {
-	var textbox = jQuery( 'textarea' ),
+window.jQuery(function( jQuery ) {
+	var alert = window.alert,
+		textbox = jQuery( 'textarea' ),
 		selectStart = jQuery( 'input[name=start]' ),
 		selectEnd = jQuery( 'input[name=end]' ),
 		positionInfo = jQuery( '#position' );
-	
-	// Update caret position on any user action
-	textbox.on( 'keyup', updatePosition )
-		.on( 'click', updatePosition )
-		.on( 'focus', updatePosition );
-	
-
-	// Watch for highlight trigger
-	jQuery( 'form' ).on( 'submit', function( event ) {
-		select(
-			parseInt( selectStart.val() || '0', 10 ),
-			parseInt( selectEnd.val() || '0', 10 )
-		);
-
-		scroll();
-		return false;
-	});
-
 
 	// Highlighting input ranges
 	function select( start, end ) {
@@ -75,4 +58,20 @@ jQuery(function( jQuery ) {
 	function updatePosition(){
 		positionInfo.html( caretPos() );
 	}
+
+	// Update caret position on any user action
+	textbox.on( 'keyup', updatePosition )
+		.on( 'click', updatePosition )
+		.on( 'focus', updatePosition );
+
+	// Watch for highlight trigger
+	jQuery( 'form' ).on( 'submit', function( event ) {
+		select(
+			parseInt( selectStart.val() || '0', 10 ),
+			parseInt( selectEnd.val() || '0', 10 )
+		);
+
+		scroll();
+		return false;
+	});
 });

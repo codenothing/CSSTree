@@ -1,3 +1,7 @@
+var munit = global.munit,
+	CSSTree = global.CSSTree;
+
+// Put core functionality at the highest priority
 munit( 'CSSTree', { priority: 1.0 } );
 
 // Add basic existance tests to ensure api stays consistent through versions

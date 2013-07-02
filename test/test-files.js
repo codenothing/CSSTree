@@ -1,4 +1,6 @@
-var fs = require( 'fs' ),
+var munit = global.munit,
+	CSSTree = global.CSSTree,
+	fs = require( 'fs' ),
 	SHEETS = __dirname + '/sheets/',
 	POSITIONS = __dirname + '/positions/';
 
