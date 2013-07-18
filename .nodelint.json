@@ -2,6 +2,13 @@
 	"ignore": [
 		"test/*.css",
 		".git/",
-		"node_modules/"
-	]
+		"node_modules/",
+		"dist/",
+		"demo/CSSTree.js"
+	],
+	"linters": {
+		"jshint": {
+			"node": true
+		}
+	}
 }

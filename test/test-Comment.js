@@ -1,3 +1,6 @@
+var munit = global.munit,
+	CSSTree = global.CSSTree;
+
 munit( 'Comment.init', function( assert ) {
 	var position = new CSSTree.Position( 25 ),
 		comment = new CSSTree.Comment( " /* Test Comment */ ", null, position );

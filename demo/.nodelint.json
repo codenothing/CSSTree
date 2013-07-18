@@ -4,5 +4,11 @@
 		"textarea.js",
 		"counter/jquery.js",
 		"counter/textarea.js"
-	]
+	],
+	"linters": {
+		"jshint": {
+			"node": false,
+			"browser": true
+		}
+	}
 }

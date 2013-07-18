@@ -1,5 +1,7 @@
-jQuery(function( jQuery ) {
-	var contentArea = jQuery( '.content' ),
+window.jQuery(function( jQuery ) {
+	var CSSTree = window.CSSTree,
+		alert = window.alert,
+		contentArea = jQuery( '.content' ),
 		textarea = jQuery( 'textarea' ),
 		button = jQuery( 'button' ),
 		result = jQuery( 'pre' ),

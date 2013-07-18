@@ -1,3 +1,6 @@
+var munit = global.munit,
+	CSSTree = global.CSSTree;
+
 munit( 'Position.init', function( assert ) {
 	var position = new CSSTree.Position( 25 );
 

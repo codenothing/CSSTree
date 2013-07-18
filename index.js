@@ -10,7 +10,7 @@ require( './build/libs.js' ).forEach(function( file ) {
 
 
 // Attach exporter for parent modules
-CSSTree.exportScript = function( callback ) {
+global.CSSTree.exportScript = function( callback ) {
 	if ( callback ) {
 		fs.readFile( __dirname + '/dist/CSSTree.js', 'utf8', callback );
 	}
