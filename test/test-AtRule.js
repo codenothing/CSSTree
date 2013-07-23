@@ -68,6 +68,6 @@ munit( 'AtRule', {
 			atrule.breakdown();
 			assert.deepEqual( object.name, atrule.parts, object.parts );
 		});
-	},
+	}
 
 });

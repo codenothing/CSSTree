@@ -66,6 +66,6 @@ munit( 'Rule', {
 			rule.breakdown();
 			assert.deepEqual( object.name, rule.parts, object.parts );
 		});
-	},
+	}
 
 });

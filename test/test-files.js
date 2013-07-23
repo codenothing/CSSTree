@@ -60,6 +60,6 @@ munit( 'Files', { priority: munit.PRIORITY_LOW }, {
 
 			assert.deepEqual( name, branches, match );
 		});
-	},
+	}
 
 });
