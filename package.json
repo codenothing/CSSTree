@@ -5,19 +5,20 @@
 	"keywords": [ "css", "parser", "tool" ],
 	"author": "Corey Hart <corey@codenothing.com> (http://www.codenothing.com)",
 	"homepage": "http://codenothing.github.com/CSSTree/",
-	"version": "0.0.2",
+	"version": "0.0.3pre",
 	"main": "./index.js",
 	"engines": {
 		"node": ">=0.8"
 	},
 	"scripts": {
-		"test": "make test"
+		"test": "make test",
+		"postinstall": "node build/build.js"
 	},
 	"dependencies": {
 	},
 	"devDependencies": {
-		"nlint": "0.0.5",
-		"munit": "0.0.6",
+		"nlint": "0.0.6",
+		"munit": "0.0.7",
 		"async": "0.2.9"
 	}
 }
