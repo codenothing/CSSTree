@@ -10,8 +10,8 @@ munit( 'CSSTree', { priority: 1.0 }, {
 		var css = "body { color: red; }",
 			tree = new CSSTree( css );
 
-		assert.equal( 'css', tree.css, css )
-			.equal( 'length', tree.length, css.length )
+		assert.exists( 'iter', tree.iter )
+			.equal( 'css', tree.css, css )
 			.isArray( 'branches', tree.branches );
 	},
 
