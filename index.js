@@ -1,8 +1,10 @@
 var fs = require( 'fs' ),
-	_CSSTree = global.CSSTree;
+	_CSSTree = global.CSSTree,
+	_StringIterator = global.StringIterator;
 
 
 // Grab CSSTree files
+global.StringIterator = require( "string-iterator" );
 global.CSSTree = module.exports = require( './lib/CSSTree.js' );
 require( './build/libs.js' ).forEach(function( file ) {
 	require( './lib/' + file );
@@ -21,4 +23,5 @@ global.CSSTree.exportScript = function( callback ) {
 
 
 // Clear global case
+global.StringIterator = _StringIterator;
 global.CSSTree = _CSSTree;

@@ -27,7 +27,7 @@ window.jQuery(function( jQuery ) {
 			}
 
 			if ( branch.branches && branch.branches.length ) {
-				insertLinks( branches );
+				insertLinks( branch.branches );
 			}
 		});
 	}

@@ -15,6 +15,7 @@
 		"postinstall": "node build/build.js"
 	},
 	"dependencies": {
+		"string-iterator": "0.0.1"
 	},
 	"devDependencies": {
 		"nlint": "0.0.6",
