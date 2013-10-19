@@ -23,6 +23,6 @@ munit( 'CSSTree', { priority: 1.0 }, {
 			.isFunction( 'Comment', CSSTree.Comment )
 			.isFunction( 'AtRule', CSSTree.AtRule )
 			.isFunction( 'Rule', CSSTree.Rule );
-	},
+	}
 
 });

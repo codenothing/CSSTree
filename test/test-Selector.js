@@ -128,6 +128,6 @@ munit( 'Selector', {
 			selector.breakdown();
 			assert.deepEqual( object.name, selector.parts, object.parts );
 		});
-	},
+	}
 
 });
