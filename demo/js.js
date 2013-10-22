@@ -74,7 +74,7 @@ window.jQuery(function( jQuery ) {
 	result.on( 'click', 'a', function(){
 		var parts = jQuery( this ).attr( 'data-pos' ).split( ',' ),
 			start = parseInt( parts[ 0 ] || '', 10 ),
-			end = parseInt( parts[ 1 ] || '', 10 );
+			end = parseInt( parts[ 1 ] || '', 10 ) + 1;
 
 		if ( end > start ) {
 			select( start, end );
