@@ -1,6 +1,6 @@
 # CSSTree
 
-CSS parsing into javascript object.
+CSS AST Builder
 
 [![Build Status](https://travis-ci.org/codenothing/CSSTree.png?branch=master)](https://travis-ci.org/codenothing/CSSTree)  
 

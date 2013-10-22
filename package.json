@@ -1,6 +1,6 @@
 {
 	"name": "csstree",
-	"description": "CSS to javascript object parser",
+	"description": "CSS AST Builder",
 	"repository": "https://github.com/codenothing/CSSTree/",
 	"keywords": [ "css", "parser", "tool" ],
 	"author": "Corey Hart <corey@codenothing.com> (http://www.codenothing.com)",
