@@ -1,4 +1,3 @@
-
 module.exports = [
 	{
 		atrule: "@import url(style.css)",
@@ -6,7 +5,7 @@ module.exports = [
 		position: {
 			range: {
 				start: 0,
-				end: 22,
+				end: 21,
 				length: 22
 			},
 			start: {
@@ -15,12 +14,12 @@ module.exports = [
 			},
 			end: {
 				line: 1,
-				character: 23
+				character: 22
 			},
 			chunks: [
 				{
 					start: 0,
-					end: 22,
+					end: 21,
 					length: 22
 				}
 			]
@@ -32,7 +31,7 @@ module.exports = [
 		position: {
 			range: {
 				start: 25,
-				end: 57,
+				end: 56,
 				length: 32
 			},
 			start: {
@@ -41,12 +40,12 @@ module.exports = [
 			},
 			end: {
 				line: 5,
-				character: 2
+				character: 1
 			},
 			chunks: [
 				{
 					start: 25,
-					end: 57,
+					end: 56,
 					length: 32
 				}
 			]
@@ -59,7 +58,7 @@ module.exports = [
 				position: {
 					range: {
 						start: 42,
-						end: 54,
+						end: 53,
 						length: 12
 					},
 					start: {
@@ -68,12 +67,12 @@ module.exports = [
 					},
 					end: {
 						line: 4,
-						character: 14
+						character: 13
 					},
 					chunks: [
 						{
 							start: 42,
-							end: 54,
+							end: 53,
 							length: 12
 						}
 					]
@@ -87,7 +86,7 @@ module.exports = [
 		position: {
 			range: {
 				start: 59,
-				end: 224,
+				end: 223,
 				length: 165
 			},
 			start: {
@@ -96,12 +95,12 @@ module.exports = [
 			},
 			end: {
 				line: 15,
-				character: 2
+				character: 1
 			},
 			chunks: [
 				{
 					start: 59,
-					end: 224,
+					end: 223,
 					length: 165
 				}
 			]
@@ -114,7 +113,7 @@ module.exports = [
 				position: {
 					range: {
 						start: 131,
-						end: 143,
+						end: 142,
 						length: 12
 					},
 					start: {
@@ -123,12 +122,12 @@ module.exports = [
 					},
 					end: {
 						line: 8,
-						character: 14
+						character: 13
 					},
 					chunks: [
 						{
 							start: 131,
-							end: 143,
+							end: 142,
 							length: 12
 						}
 					]
@@ -142,7 +141,7 @@ module.exports = [
 				position: {
 					range: {
 						start: 146,
-						end: 222,
+						end: 221,
 						length: 76
 					},
 					start: {
@@ -151,12 +150,12 @@ module.exports = [
 					},
 					end: {
 						line: 14,
-						character: 3
+						character: 2
 					},
 					chunks: [
 						{
 							start: 146,
-							end: 222,
+							end: 221,
 							length: 76
 						}
 					]
@@ -169,7 +168,7 @@ module.exports = [
 						position: {
 							range: {
 								start: 162,
-								end: 174,
+								end: 173,
 								length: 12
 							},
 							start: {
@@ -178,12 +177,12 @@ module.exports = [
 							},
 							end: {
 								line: 10,
-								character: 15
+								character: 14
 							},
 							chunks: [
 								{
 									start: 162,
-									end: 174,
+									end: 173,
 									length: 12
 								}
 							]
@@ -197,7 +196,7 @@ module.exports = [
 						position: {
 							range: {
 								start: 178,
-								end: 219,
+								end: 218,
 								length: 41
 							},
 							start: {
@@ -206,12 +205,12 @@ module.exports = [
 							},
 							end: {
 								line: 13,
-								character: 4
+								character: 3
 							},
 							chunks: [
 								{
 									start: 178,
-									end: 219,
+									end: 218,
 									length: 41
 								}
 							]
@@ -224,7 +223,7 @@ module.exports = [
 								position: {
 									range: {
 										start: 203,
-										end: 214,
+										end: 213,
 										length: 11
 									},
 									start: {
@@ -233,12 +232,12 @@ module.exports = [
 									},
 									end: {
 										line: 12,
-										character: 15
+										character: 14
 									},
 									chunks: [
 										{
 											start: 203,
-											end: 214,
+											end: 213,
 											length: 11
 										}
 									]

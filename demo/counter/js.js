@@ -68,7 +68,7 @@ window.jQuery(function( jQuery ) {
 	jQuery( 'form' ).on( 'submit', function( event ) {
 		select(
 			parseInt( selectStart.val() || '0', 10 ),
-			parseInt( selectEnd.val() || '0', 10 )
+			parseInt( selectEnd.val() || '0', 10 ) + 1
 		);
 
 		scroll();

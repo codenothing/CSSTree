@@ -6,7 +6,7 @@ module.exports = [
 		position: {
 			range: {
 				start: 0,
-				end: 22,
+				end: 21,
 				length: 22
 			},
 			start: {
@@ -15,12 +15,12 @@ module.exports = [
 			},
 			end: {
 				line: 1,
-				character: 23
+				character: 22
 			},
 			chunks: [
 				{
 					start: 0,
-					end: 22,
+					end: 21,
 					length: 22
 				}
 			]
@@ -32,7 +32,7 @@ module.exports = [
 		position: {
 			range: {
 				start: 23,
-				end: 162,
+				end: 161,
 				length: 139
 			},
 			start: {
@@ -41,12 +41,12 @@ module.exports = [
 			},
 			end: {
 				line: 1,
-				character: 163
+				character: 162
 			},
 			chunks: [
 				{
 					start: 23,
-					end: 162,
+					end: 161,
 					length: 139
 				}
 			]
@@ -59,7 +59,7 @@ module.exports = [
 				position: {
 					range: {
 						start: 92,
-						end: 104,
+						end: 103,
 						length: 12
 					},
 					start: {
@@ -68,12 +68,12 @@ module.exports = [
 					},
 					end: {
 						line: 1,
-						character: 105
+						character: 104
 					},
 					chunks: [
 						{
 							start: 92,
-							end: 104,
+							end: 103,
 							length: 12
 						}
 					]
@@ -87,7 +87,7 @@ module.exports = [
 				position: {
 					range: {
 						start: 105,
-						end: 161,
+						end: 160,
 						length: 56
 					},
 					start: {
@@ -96,12 +96,12 @@ module.exports = [
 					},
 					end: {
 						line: 1,
-						character: 162
+						character: 161
 					},
 					chunks: [
 						{
 							start: 105,
-							end: 161,
+							end: 160,
 							length: 56
 						}
 					]
@@ -114,7 +114,7 @@ module.exports = [
 						position: {
 							range: {
 								start: 117,
-								end: 128,
+								end: 127,
 								length: 11
 							},
 							start: {
@@ -123,12 +123,12 @@ module.exports = [
 							},
 							end: {
 								line: 1,
-								character: 129
+								character: 128
 							},
 							chunks: [
 								{
 									start: 117,
-									end: 128,
+									end: 127,
 									length: 11
 								}
 							]
@@ -142,7 +142,7 @@ module.exports = [
 						position: {
 							range: {
 								start: 129,
-								end: 160,
+								end: 159,
 								length: 31
 							},
 							start: {
@@ -151,12 +151,12 @@ module.exports = [
 							},
 							end: {
 								line: 1,
-								character: 161
+								character: 160
 							},
 							chunks: [
 								{
 									start: 129,
-									end: 160,
+									end: 159,
 									length: 31
 								}
 							]
@@ -169,7 +169,7 @@ module.exports = [
 								position: {
 									range: {
 										start: 149,
-										end: 159,
+										end: 158,
 										length: 10
 									},
 									start: {
@@ -178,12 +178,12 @@ module.exports = [
 									},
 									end: {
 										line: 1,
-										character: 160
+										character: 159
 									},
 									chunks: [
 										{
 											start: 149,
-											end: 159,
+											end: 158,
 											length: 10
 										}
 									]
