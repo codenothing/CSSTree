@@ -1,0 +1,13 @@
+#elem span.color span {
+	width/*prop*/:/*value*/100px; /*rules*/
+}
+
+@media screen {
+	/* first level */
+	margin: 20px;
+
+	b {
+		/* second level */
+		color/*nested prop*/:/*nested value*/red;
+	}
+}
