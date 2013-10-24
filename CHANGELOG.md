@@ -1,3 +1,8 @@
+## v0.0.3
+
+Installed StringIterator utility to replace manual loops
+
+
 ## v0.0.2
 
 **Bug Fixes**

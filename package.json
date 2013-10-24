@@ -1,12 +1,20 @@
 {
 	"name": "csstree",
+	"version": "0.0.3",
+	"main": "./index.js",
 	"description": "CSS AST Builder",
-	"repository": "https://github.com/codenothing/CSSTree/",
-	"keywords": [ "css", "parser", "tool" ],
+	"keywords": [ "css", "parser", "tool", "ast" ],
 	"author": "Corey Hart <corey@codenothing.com> (http://www.codenothing.com)",
 	"homepage": "http://codenothing.github.com/CSSTree/",
-	"version": "0.0.3pre",
-	"main": "./index.js",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/codenothing/CSSTree.git"
+	},
+	"bugs": {
+		"url": "https://github.com/codenothing/CSSTree/issues",
+		"email": "corey@codenothing.com"
+	},
 	"engines": {
 		"node": ">=0.8"
 	},

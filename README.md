@@ -103,10 +103,10 @@ information about that fragments section of the stylesheet. Comes in the followi
 }
 ```
 
-* **range**: Contains the start and end positions of the fragment within the stylesheet
+* **range**: Contains the start and end indexes of the fragment within the stylesheet
 * **start**: Contains the starting line/character info of the fragment based on line breaks (\r\n|\r|\n)
 * **end**: Contains the ending line/character info of the fragment based on line breaks (\r\n|\r|\n)
-* **chunks**: When a comment exists between the start & end positions, chunks represents only the sections that belong to this position.
+* **chunks**: When a comment exists between the start & end indexes, chunks represents only the sections that belong to this position.
 
 
 ### License
