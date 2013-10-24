@@ -17,7 +17,7 @@
     <div class="wrapper">
       <header>
         <h1 class="header">CSSTree</h1>
-        <p class="header">CSS to javascript object parser</p>
+        <p class="header">CSS AST Builder</p>
 
         <ul>
           <li class="download"><a class="buttons" href="https://github.com/codenothing/CSSTree/zipball/master">Download ZIP</a></li>
@@ -30,38 +30,44 @@
 
       </header>
       <section>
-        <h1>CSSTree</h1>
+        <h1>
+<a name="csstree" class="anchor" href="#csstree"><span class="octicon octicon-link"></span></a>CSSTree</h1>
 
-<p>CSS parsing into javascript object.</p>
+<p>CSS AST Builder</p>
 
-<h3>Installation</h3>
+<p><a href="https://travis-ci.org/codenothing/CSSTree"><img src="https://travis-ci.org/codenothing/CSSTree.png?branch=master" alt="Build Status"></a>  </p>
 
-<div class="highlight"><pre><span class="nv">$ </span>npm install csstree
+<h3>
+<a name="installation" class="anchor" href="#installation"><span class="octicon octicon-link"></span></a>Installation</h3>
+
+<div class="highlight highlight-bash"><pre><span class="nv">$ </span>npm install csstree
 </pre></div>
 
 <p>CSSTree may also be run in a browser enviornment.</p>
 
-<div class="highlight"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">'text/javascript'</span> <span class="na">src=</span><span class="s">'CSSTree.js'</span><span class="nt">&gt;&lt;/script&gt;</span>
+<div class="highlight highlight-html"><pre><span class="nt">&lt;script </span><span class="na">type=</span><span class="s">'text/javascript'</span> <span class="na">src=</span><span class="s">'CSSTree.js'</span><span class="nt">&gt;&lt;/script&gt;</span>
 </pre></div>
 
-<h3>Usage</h3>
+<h3>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage</h3>
 
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">instance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CSSTree</span><span class="p">(</span> <span class="nx">css</span> <span class="p">);</span>
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">instance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CSSTree</span><span class="p">(</span> <span class="nx">css</span> <span class="p">);</span>
 
 <span class="c1">// CSS Tree</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">branches</span> <span class="p">);</span>
 </pre></div>
 
-<h3>Example</h3>
+<h3>
+<a name="example" class="anchor" href="#example"><span class="octicon octicon-link"></span></a>Example</h3>
 
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">instance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CSSTree</span><span class="p">(</span> <span class="s2">"html body { background: red; margin: 10px 5px; }"</span> <span class="p">);</span>
+<div class="highlight highlight-js"><pre><span class="kd">var</span> <span class="nx">instance</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CSSTree</span><span class="p">(</span> <span class="s2">"html body { background: red; margin: 10px 5px; }"</span> <span class="p">);</span>
 
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span> <span class="nx">instance</span><span class="p">.</span><span class="nx">branches</span> <span class="p">);</span>
 </pre></div>
 
 <p>Will give an object format of the following:</p>
 
-<div class="highlight"><pre><span class="p">{</span>
+<div class="highlight highlight-js"><pre><span class="p">{</span>
     <span class="nx">selector</span><span class="o">:</span> <span class="s1">'html body'</span><span class="p">,</span>
     <span class="nx">parts</span><span class="o">:</span> <span class="p">[</span>
         <span class="s1">'html'</span><span class="p">,</span>
@@ -87,12 +93,13 @@
 <span class="p">}</span>
 </pre></div>
 
-<h3>Position Objects</h3>
+<h3>
+<a name="position-objects" class="anchor" href="#position-objects"><span class="octicon octicon-link"></span></a>Position Objects</h3>
 
 <p>Every selector, rule, atrule and comment includes a 'Position' object which contains useful
 information about that fragments section of the stylesheet. Comes in the following form:</p>
 
-<div class="highlight"><pre><span class="p">{</span>
+<div class="highlight highlight-js"><pre><span class="p">{</span>
     <span class="nx">property</span><span class="o">:</span> <span class="s1">'background'</span><span class="p">,</span>
     <span class="nx">value</span><span class="o">:</span> <span class="s1">'red'</span><span class="p">,</span>
     <span class="nx">parts</span><span class="o">:</span> <span class="p">[</span>
@@ -125,14 +132,15 @@ information about that fragments section of the stylesheet. Comes in the followi
 
 <ul>
 <li>
-<strong>range</strong>: Contains the start and end positions of the fragment within the stylesheet</li>
+<strong>range</strong>: Contains the start and end indexes of the fragment within the stylesheet</li>
 <li>
 <strong>start</strong>: Contains the starting line/character info of the fragment based on line breaks (\r\n|\r|\n)</li>
 <li>
 <strong>end</strong>: Contains the ending line/character info of the fragment based on line breaks (\r\n|\r|\n)</li>
 <li>
-<strong>chunks</strong>: When a comment exists between the start &amp; end positions, chunks represents only the sections that belong to this position.</li>
-</ul><h3>License</h3>
+<strong>chunks</strong>: When a comment exists between the start &amp; end indexes, chunks represents only the sections that belong to this position.</li>
+</ul><h3>
+<a name="license" class="anchor" href="#license"><span class="octicon octicon-link"></span></a>License</h3>
 
 <pre><code>The MIT License
 
