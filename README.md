@@ -2,7 +2,8 @@
 
 CSS AST Builder
 
-[![Build Status](https://travis-ci.org/codenothing/CSSTree.png?branch=master)](https://travis-ci.org/codenothing/CSSTree)  
+[![Build Status](https://travis-ci.org/codenothing/CSSTree.png?branch=master)](https://travis-ci.org/codenothing/CSSTree)
+[![Code Climate](https://codeclimate.com/github/codenothing/CSSTree.png)](https://codeclimate.com/github/codenothing/CSSTree)
 
 ### Installation
 
