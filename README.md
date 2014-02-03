@@ -2,6 +2,7 @@
 
 CSS AST Builder
 
+[![NPM version](https://badge.fury.io/js/csstree.png)](http://badge.fury.io/js/csstree)
 [![Build Status](https://travis-ci.org/codenothing/CSSTree.png?branch=master)](https://travis-ci.org/codenothing/CSSTree)
 [![Code Climate](https://codeclimate.com/github/codenothing/CSSTree.png)](https://codeclimate.com/github/codenothing/CSSTree)
 
